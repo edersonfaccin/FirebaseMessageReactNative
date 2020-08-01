@@ -5,11 +5,18 @@ import { Platform } from 'react-native'
 function PushMessage(message){
 
     if(Platform.OS === 'ios'){
-        //TODO
+        PushNotificationIOS.localNotification({
+            vibrate: true, 
+            vibration: 800,
+            subText: "Bloqueio perto de você", 
+            priority: "high",
+            title: "NoBlitz", 
+            message: message
+        })
     }else{
         PushNotification.localNotification({
             vibrate: true, 
-            vibration: 1000,
+            vibration: 800,
             //bigText: message,
             subText: "Bloqueio perto de você", 
             priority: "high",
