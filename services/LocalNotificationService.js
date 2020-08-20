@@ -34,7 +34,7 @@ class LocalNotificationService {
         })
     }
 
-    unregister = () => {
+    unRegister = () => {
         PushNotification.unregister()
     }
 

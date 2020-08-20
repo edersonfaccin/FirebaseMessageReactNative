@@ -10,8 +10,8 @@ class FCMService {
 
     registerAppWithFCM = async() => {
         if(Platform.OS === 'ios'){
-            await messaging().registerDeviceForRemoteMessagind()
-            await messagind().setAutoInitEnabled(true)
+            await messaging().registerDeviceForRemoteMessages()
+            await messaging().setAutoInitEnabled(true)
         }
     }
 
