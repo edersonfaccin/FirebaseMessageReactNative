@@ -16,10 +16,12 @@ const App = () => {
 
     function onNotification(notify){
       console.log("[APP] on notify", notify)
+      
       const options = {
         soundName: 'default',
         playSound: true
       }
+
       localNotificationService.showNotification(0, notify.title, notify.body, notify, options)
     }
 
@@ -41,7 +43,7 @@ const App = () => {
       <Text>Push Notification</Text>
       <Text>https://console.firebase.google.com</Text>
       <Text>Send Remote Messages</Text>
-      <Button title="Press me" 
+       <Button title="Press me" 
         onPress={() => localNotificationService.cancelAllLocalNotifications()}/>
       <Text>Author: Ederson Faccin Frasson</Text> 
     </View>

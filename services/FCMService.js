@@ -81,12 +81,12 @@ class FCMService {
                 let notification = null
 
                 if(Platform.OS === 'ios'){
-                    notification = remoteMessage.data.notification                    
+                    notification = remoteMessage.data.notification            
                 }else{
                     notification = remoteMessage.notification
                 }
-
-                if(!!notification.body) PushMessage(notification.body)
+                
+                if(!!notification.body) PushMessage(notification) 
             }
         })
 
