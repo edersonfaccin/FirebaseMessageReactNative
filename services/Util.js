@@ -3,7 +3,6 @@ import PushNotification from 'react-native-push-notification'
 import { Platform } from 'react-native'
 
 function PushMessage(message){
-
     if(Platform.OS === 'ios'){
         PushNotificationIOS.requestPermissions()
 
@@ -11,23 +10,15 @@ function PushMessage(message){
             alertBody: message.body,
             alertTitle: message.title
         })
-        /*PushNotificationIOS.localNotification({
-            vibrate: true, 
-            vibration: 800,
-            subText: message.body, 
-            priority: "high",
-            title: message.title, 
-            message: message
-        })*/
     }else{
         PushNotification.localNotification({
             vibrate: true, 
-            vibration: 800,
-            //bigText: message,
+            vibration: 1000,
+            bigText: message.body,
             subText: message.body, 
             priority: "high",
             title: message.title, 
-            message: message
+            message: message.body
         })
     }
 }

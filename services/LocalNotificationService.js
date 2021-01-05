@@ -10,13 +10,14 @@ class LocalNotificationService {
                 console.log('Local notification service - onregister', token)
             },
             onNotification: function(notification) {
-                console.log('Local notification service - on notification', notification)
+                //console.log('Local notification service - on notification', notification)
                 if(!notification?.data){
                     return
                 }
                 notification.userInteraction = true
-                
-                onOpenNotification(Platform.OS === 'ios' ? notification.data.item : notification.data)
+                var msgAndroid = { title: notification.title, body: notification.message }
+
+                onOpenNotification(Platform.OS === 'ios' ? notification.data.item : msgAndroid)
 
                 if(Platform.OS === 'ios'){
                     notification.finish(PushNotificationIOS.FetchResult.NoData)
@@ -28,6 +29,8 @@ class LocalNotificationService {
                 badge: true,
                 sound: true
             },
+
+            senderID: '554164322879',
 
             popInitialNotification: true,
             requestPermissions: true

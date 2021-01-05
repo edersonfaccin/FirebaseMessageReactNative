@@ -27,7 +27,8 @@ const App = () => {
 
     function onOpenNotification(notify){
       console.log("[App] onOpenNotification: ", notify)
-      alert('Open notify ' + notify.body)
+
+      
     }
 
     return () => {

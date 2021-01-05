@@ -85,7 +85,7 @@ class FCMService {
                 }else{
                     notification = remoteMessage.notification
                 }
-                
+
                 if(!!notification.body) PushMessage(notification) 
             }
         })
