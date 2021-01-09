@@ -376,8 +376,8 @@ PODS:
     - React-Core (= 0.63.1)
     - React-cxxreact (= 0.63.1)
     - React-jsi (= 0.63.1)
-  - RNCPushNotificationIOS (1.3.0):
-    - React
+  - RNCPushNotificationIOS (1.8.0):
+    - React-Core
   - RNFBApp (8.2.0):
     - Firebase/CoreOnly (~> 6.27.0)
     - React
@@ -580,7 +580,7 @@ SPEC CHECKSUMS:
   React-RCTText: 4f95d322b7e6da72817284abf8a2cdcec18b9cd8
   React-RCTVibration: f3a9123c244f35c40d3c9f3ec3f0b9e5717bb292
   ReactCommon: 2905859f84a94a381bb0d8dd3921ccb1a0047cb8
-  RNCPushNotificationIOS: d5fd66aed4e03c6491ca0c6111a03d4f6455ff6c
+  RNCPushNotificationIOS: 61a7c72bd1ebad3568025957d001e0f0e7b32191
   RNFBApp: 6fd8a7e757135d4168bf033a8812c241af7363a0
   RNFBMessaging: d884c58a92ce90687ae8b5a5772cf5d3d5223dfb
   Yoga: d5bd05a2b6b94c52323745c2c2b64557c8c66f64
